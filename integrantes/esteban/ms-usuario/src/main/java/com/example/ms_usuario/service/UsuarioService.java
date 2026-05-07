@@ -1,6 +1,5 @@
 package com.example.ms_usuario.service;
 
-import com.example.ms_usuario.model.Perfil;
 import com.example.ms_usuario.model.Usuario;
 import com.example.ms_usuario.repository.UsuarioRepository;
 
