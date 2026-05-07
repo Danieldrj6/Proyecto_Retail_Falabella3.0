@@ -12,8 +12,6 @@ public class ProductoService {
     @Autowired
     private ProductoRepository repository;
 
-    
-
     public Producto findById(Integer id) {
         return repository.findById(id).orElse(null);
     }
