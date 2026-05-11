@@ -16,6 +16,8 @@ CREATE TABLE usuario (
     rol VARCHAR(50) NOT NULL,
     activo BOOLEAN NOT NULL DEFAULT TRUE,
     fecha_registro DATETIME NOT NULL,
-    perfil_id INT,
+    perfil_id INT DEFAULT NULL,
+    -- carritoId INT NOT NULL,
     FOREIGN KEY (perfil_id) REFERENCES perfil(id)
+    -- FOREIGN KEY (carritoId) REFERENCES carrito(id)
 );
