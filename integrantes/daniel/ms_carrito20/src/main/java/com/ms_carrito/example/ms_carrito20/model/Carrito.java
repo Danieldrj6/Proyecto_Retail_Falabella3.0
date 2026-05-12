@@ -4,16 +4,20 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "carritos")
+@Table(name = "db_carrito")
+@NoArgsConstructor
 @Data
 @AllArgsConstructor
 public class Carrito {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "user_id", nullable = false)
-    private String userId;
+    private Integer userId;
+
+    @Column(name = "total_precio")
+    private Integer totalPrecio = 0;
 
 }

@@ -1,42 +1,25 @@
 package com.ms_carrito.example.ms_carrito20.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
-@Table(name = "Carrito_items")
+@Table(name = "db_itemscarrito")
+@NoArgsConstructor
 @Data
 @AllArgsConstructor
 public class CarritoItems {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer carritoId;
 
-    @JoinColumn(name = "carritoId", nullable = false)
-    private Carrito carritoId;
+    @Column(name = "producto_id", nullable = false)
+    private Integer productoId;
 
-    @Column(name = "productId", nullable = false)
-    private Integer productId;
+    @Column(name = "cantidad")
+    private Integer cantidad = 1;
 
-    @Column(name = "productoNombre", nullable = false)
-    private String productoNombre;
-
-    @Column(name = "marca")
-    private String marca;
-
-    @Column(name = "tipo")
-    private String tipo;
-
-    @Column(nullable = false)
-    private Integer cantidad;
-
-    @Column(name = "precioUnidad", nullable = false)
-    private Integer precioUnidad;
-
-    public Integer getSubtotal() {
-        return precioUnidad * cantidad;
-    }
 }
-
-
