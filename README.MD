@@ -1,4 +1,4 @@
-Este proyecto se basa como inspiracion en un retail de una funcionalidad similar a la empresa falabella lograndro registrar productos, carritos, ventas, usuarios, etc.
+Este proyecto se basa como inspiracion en un retail de una funcionalidad similar a la empresa falabella logrando registrar productos, carritos, ventas, usuarios, etc.
 El programa de retail fue creado por los siguientes integrantes: Daniel del rio jara, Esteban Rojas y Ruben catril.
 Cada microservicio tiene sus propias funcionalidades unicas y las generales como por ejemplo un metodo para ver una lista de productos, buscar por id de carrito y buscar segun usuario.
 Para lograr que el programa funcione correctamente ejecute cada app para inicializar sus base de datos independientes y sus respectivos microservicios ademas de iniciar laragon para tener la base de datos solida guardando cada dato para probar luego mediante apis o con postman se puede probar cada metodo de cada microservicio conectado entre todos.
