@@ -4,14 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ventas.example.ms_ventas.model.*;
 import com.ventas.example.ms_ventas.model.VentasModelo;
-import com.ventas.example.ms_ventas.service.*;
+import com.ventas.example.ms_ventas.service.VentasService;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ventasController {
 
     @Autowired
-    private ventasService VentasService;
+    private VentasService ventasService;
 
     @GetMapping()
     public List<VentasModelo> findAll(){
@@ -34,25 +31,20 @@ public class ventasController {
     public VentasModelo save(@RequestBody VentasModelo venta){
         return ventasService.save(venta);
     }
-
-    @GetMapping("/{id}")
-    public VentasModelo findById(@PathVariable Integer id) {
-        return ventasService.findById(id);
-    }
     
     @GetMapping("/carrito/{id}")
-    public VentasModelo findByIdCarrito(@PathVariable Integer id) {
+    public List<VentasModelo> findByIdCarrito(@PathVariable Integer id) {
         return ventasService.findByIdCarrito(id);
     }
 
     @GetMapping("/usuario/{id}")
-    public VentasModelo findByIdUsuario(@PathVariable Integer id) {
+    public List<VentasModelo> findByIdUsuario(@PathVariable Integer id) {
         return ventasService.findByIdUsuario(id);
     }
 
     @GetMapping("/factura/{id}")
-    public VentasModelo esFacturaById(@PathVariable Integer id) {
-        return ventasService.esFacturaById(id);
+    public List<VentasModelo> esFacturaById(@PathVariable Integer id, boolean venta) {
+        return ventasService.esFacturaById(id, venta);
     }
 
 }
