@@ -39,7 +39,7 @@ public class envioController {
         return EnvioService.getEnvioId(id);
     }
     
-    @PostMapping("/compra/{id}")
+    @PostMapping("/pedido/{id}")
     public Envio obtenerEnvioPorIdCompra(@PathVariable int id) {
         return EnvioService.getEnvioIdCompra(id);
     }
