@@ -1,11 +1,13 @@
 package com.ms_carrito.example.ms_carrito20.controller;
 
 import com.ms_carrito.example.ms_carrito20.model.Carrito;
+import com.ms_carrito.example.ms_carrito20.model.CarritoItems;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ms_carrito.example.ms_carrito20.services.ServicesCarrito;
@@ -43,6 +45,12 @@ public class ControllerCarrito {
     @GetMapping("/{id}")
     public Carrito findById(@PathVariable Integer id) {
         return servicesCarrito.findById(id);
+    }
+    
+
+    @PostMapping("/items/{producto_id}/{carrito_id}/{cantidad}")
+    public CarritoItems agregarItem(@PathVariable Integer producto_id, Integer carrito_id, Integer cantidad) {     
+        return servicesCarrito.agregarItem(producto_id, carrito_id, cantidad);
     }
     
 
