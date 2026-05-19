@@ -1,4 +1,4 @@
-package main.java.com.example.ms_pago.model;
+package com.example.ms_pago.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

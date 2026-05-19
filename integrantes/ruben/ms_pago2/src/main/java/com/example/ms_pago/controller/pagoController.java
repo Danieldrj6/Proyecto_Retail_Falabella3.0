@@ -1,4 +1,4 @@
-package main.java.com.example.ms_pago.controller;
+package com.example.pago2.controller;
 
 import com.example.ms_pago.service.*;
 
@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @RequestMapping("/api/v1/pago")
 public class pagoController {
+
     @Autowired
     private pagoService PagoService;
 
@@ -49,7 +50,5 @@ public class pagoController {
         pago.setId(id);
         return PagoService.getPagoById(id);
     }
-
-
 
 }
