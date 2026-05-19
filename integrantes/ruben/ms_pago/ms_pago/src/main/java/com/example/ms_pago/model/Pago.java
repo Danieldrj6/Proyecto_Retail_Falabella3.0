@@ -1,6 +1,5 @@
-package com.example.ms_envio.model;
+package main.java.com.example.ms_pago.model;
 
-import java.util.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,15 +9,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "envio")
+@Table(name = "pago")
 
-public class Envio {
+public class Pago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
 
-    private long id_pedido;
+    private int montoPago;
+    
+    private String tipoPago;
 
-    private String tipoEnvio;
+    private String tipoComprobante;
 
+    private int id_pedido;
 }
+

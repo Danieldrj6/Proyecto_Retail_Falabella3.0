@@ -28,9 +28,9 @@ public class envioRepository {
         return null;
     }
     
-    public Envio buscarPorIdCompra(int id_compra){
+    public Envio buscarPorIdCompra(int id_pedi){
         for (Envio envio : listaEnvios){
-            if (envio.getId_compra() == id_compra){
+            if (envio.getId_pedido() == id_pedi){
                 return envio;
             }
         }
@@ -54,7 +54,7 @@ public class envioRepository {
         }
         Envio envio1 = new Envio();
         envio1.setId(id);
-        envio1.setId_compra(envi.getId_compra());
+        envio1.setId_pedido(envi.getId_pedido());
         envio1.setTipoEnvio(envi.getTipoEnvio());
         listaEnvios.set(id_posicion, envio1);
         return envio1;
