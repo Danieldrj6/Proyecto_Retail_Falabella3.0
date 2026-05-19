@@ -1,4 +1,4 @@
-package main.java.com.example.ms_soporte.model;
+package main.java.com.example.ms_stock.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,20 +10,16 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "soporte")
+@Table(name = "stock")
 
-public class Soporte {
+public class Stock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_ticket;
+    private int stockId;
 
-    private int id_pedido;
+    private int producto_id;
 
-    private int id_usuario;
-
-    private Date fecha_ini_Ticket;
-
-    private Date fecha_cierre_Ticket;
+    private int producto_cant;
 
 }
