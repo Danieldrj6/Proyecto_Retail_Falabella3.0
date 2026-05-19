@@ -1,0 +1,3 @@
+INSERT INTO db_ventas(id, user_id, carrito_id, total_precio, es_factura) VALUES (1, 1, 1, 10000, true);
+INSERT INTO db_ventas(id, user_id, carrito_id, total_precio, es_factura) VALUES (2, 2, 2, 15000, false);
+INSERT INTO db_ventas(id, user_id, carrito_id, total_precio, es_factura) VALUES (3, 3, 3, 26000, false);
