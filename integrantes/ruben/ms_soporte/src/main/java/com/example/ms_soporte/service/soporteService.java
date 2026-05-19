@@ -1,14 +1,11 @@
-package main.java.com.example.ms_soporte.service;
+package com.example.ms_soporte.service;
 
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.ms_comprobante.model.*;
-import com.example.ms_comprobante.repository.*;
-
-import main.java.com.example.ms_soporte.model.Soporte;
-import main.java.com.example.ms_soporte.repository.soporteRepository;
+import com.example.ms_soporte.model.*;
+import com.example.ms_soporte.repository.soporteRepository;
 
 @Service
 

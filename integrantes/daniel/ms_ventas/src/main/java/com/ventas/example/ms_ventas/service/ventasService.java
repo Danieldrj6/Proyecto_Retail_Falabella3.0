@@ -8,7 +8,7 @@ import com.ventas.example.ms_ventas.repository.VentasRepositorio;
 import com.ventas.example.ms_ventas.model.VentasModelo;
 
 @Service
-public class VentasService {
+public class ventasService {
 
      @Autowired
     private VentasRepositorio ventasRepositorio;

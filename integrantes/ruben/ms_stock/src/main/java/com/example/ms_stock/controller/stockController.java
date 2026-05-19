@@ -1,11 +1,11 @@
-package main.java.com.example.ms_stock.controller;
+package com.example.ms_stock.controller;
 
 import com.example.ms_stock.service.*;
 
-import main.java.com.example.ms_stock.model.Stock;
-import main.java.com.example.ms_stock.service.stockService;
+import com.example.ms_stock.model.Stock;
+import com.example.ms_stock.service.stockService;
 
-import com.example.ms_stock.model.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,7 +37,7 @@ public class stockController {
 
     @GetMapping("/producto/{id}")
     public Stock obtenerStockbyId(@PathVariable int id) {
-        return StockService.getStockbyIdProducto(id);
+        return StockService.findById(null);
     }
 
 

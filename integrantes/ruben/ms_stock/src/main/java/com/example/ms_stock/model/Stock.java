@@ -1,4 +1,4 @@
-package main.java.com.example.ms_stock.model;
+package com.example.ms_stock.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,7 +16,8 @@ public class Stock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int stockId;
+    
+    private Integer stockId;
 
     @Column(name = "id_producto")
     private int producto_id;

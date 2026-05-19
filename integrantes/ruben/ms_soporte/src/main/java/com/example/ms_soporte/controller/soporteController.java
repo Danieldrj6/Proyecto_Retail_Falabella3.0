@@ -1,10 +1,9 @@
-package main.java.com.example.ms_soporte.controller;
+package com.example.ms_soporte.controller;
 
 import com.example.ms_soporte.model.*;
 import com.example.ms_soporte.service.*;
 
-import main.java.com.example.ms_soporte.model.Soporte;
-import main.java.com.example.ms_soporte.service.soporteService;
+import com.example.ms_soporte.service.soporteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +28,7 @@ public class soporteController {
     private soporteService SoporteService;
 
     @GetMapping
-    public List<soporte> listarSoportes(){
+    public List<Soporte> listarSoportes(){
         return SoporteService.getSoportes();
     }
 
