@@ -1,8 +1,8 @@
-package main.java.com.example.ms_soporte.repository;
+package com.example.ms_soporte.repository;
 
 import com.example.ms_soporte.model.*;
 
-import main.java.com.example.ms_soporte.model.Soporte;
+
 
 import java.util.*;
 import org.springframework.stereotype.Repository;
@@ -29,7 +29,7 @@ public class soporteRepository {
     public Soporte buscarPorIdUsuario(int id_usu){
         for (Soporte soporte : listaSoportes){
             if (soporte.getId_usuario() == id_usu){
-                return comprobante;
+                return soporte;
             }
         }
         return null;

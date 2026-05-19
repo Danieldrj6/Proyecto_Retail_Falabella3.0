@@ -1,4 +1,4 @@
-package main.java.com.ventas.example.ms_ventas.controller;
+package com.ventas.example.ms_ventas.controller;
 
 import java.util.List;
 
@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.ventas.model.*;
+import com.ventas.example.ms_ventas.model.*;
 import com.ventas.example.ms_ventas.model.VentasModelo;
+import com.ventas.example.ms_ventas.service.*;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

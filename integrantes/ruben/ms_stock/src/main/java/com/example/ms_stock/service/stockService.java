@@ -1,35 +1,38 @@
-package main.java.com.example.ms_stock.service;
+package com.example.ms_stock.service;
 
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.ms_stock.model.*;
+import com.example.ms_stock.repository.stockRepository;
 
-import main.java.com.example.ms_stock.model.Stock;
-import main.java.com.example.ms_stock.repository.stockRepository;
+import jakarta.persistence.Id;
+
+import com.example.ms_stock.model.Stock;
 
 @Service
 public class stockService {
 
     @Autowired
-    private stockRepository StockRepository;
+    private stockRepository repository;
     
     public List<Stock> getStock(){
-        return StockRepository.obtenerStockProductos();
+        return repository.findAll();
     }
 
     public Stock saveStock(Stock stock){
-        return StockRepository.guardar(stock);
+        return repository.save(stock);
     }
 
-    public Stock getStockbyIdProducto(int id){
-        return StockRepository.buscarPorIdProducto(id);
+    public void deleteById(Stock stock){
+        repository.deleteById(null);
     }
 
-    public int getTotalStock(){
-        return StockRepository.stockTotal();
-    }
+    public Stock findById(Integer id){
+        repository.findByStockId(id);
+        return null;
+    } 
 
 
 }
