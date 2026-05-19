@@ -1,7 +1,6 @@
 package com.ms_carrito.example.ms_carrito20.model.DTO;
 
 import java.util.*;
-import jakarta.persistence.*;
 import lombok.*;
 
 @Data
