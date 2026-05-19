@@ -17,8 +17,10 @@ public class Envio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "id_pedido")
     private long id_pedido;
 
+    @Column(name = "tipo_envio", nullable = false)
     private String tipoEnvio;
 
 }

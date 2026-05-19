@@ -18,12 +18,16 @@ public class Soporte {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_ticket;
 
+    @Column(name = "id_pedido")
     private int id_pedido;
 
+    @Column(name = "id_usuario")
     private int id_usuario;
 
+    @Column(name = "fecha_inicio_ticket", nullable = false)
     private Date fecha_ini_Ticket;
 
+    @Column(name = "fecha_cierre_ticket")
     private Date fecha_cierre_Ticket;
 
 }

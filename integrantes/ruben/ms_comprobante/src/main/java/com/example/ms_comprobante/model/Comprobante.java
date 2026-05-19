@@ -17,10 +17,13 @@ public class Comprobante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "tipo_comprobante", nullable = false)
     private String tipoComprobante;
 
+    @Column(name = "id_pago")
     private int id_pago;
 
+    @Column(name = "id_pedido")
     private int id_pedido;
 
 }

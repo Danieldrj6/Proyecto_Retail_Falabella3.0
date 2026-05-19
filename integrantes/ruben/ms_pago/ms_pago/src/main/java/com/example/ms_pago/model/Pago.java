@@ -16,12 +16,16 @@ public class Pago {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "monto_pago", nullable = false)
     private int montoPago;
     
+    @Column(name = "tipo_pago", nullable = false)
     private String tipoPago;
 
+    @Column(name = "tipo_comprobante", nullable = false)
     private String tipoComprobante;
 
+    @Column(name = "id_pedido")
     private int id_pedido;
 }
 
