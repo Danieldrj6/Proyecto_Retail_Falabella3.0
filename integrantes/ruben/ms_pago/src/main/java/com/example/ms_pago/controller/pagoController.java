@@ -1,9 +1,10 @@
-package com.example.pago2.controller;
+package com.example.ms_pago.controller;
+
 
 import com.example.ms_pago.service.*;
 
-import main.java.com.example.ms_pago.model.Pago;
-import main.java.com.example.ms_pago.service.pagoService;
+import com.example.ms_pago.model.Pago;
+import com.example.ms_pago.service.pagoService;
 
 import com.example.ms_pago.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,28 +28,22 @@ public class pagoController {
 
     @GetMapping
     public List<Pago> listarEPagos(){
-        return PagoService.getPagos();
+        return PagoService.findAll();
     }
 
     @PostMapping
-    public Envio guardarPago(@RequestBody Pago pago){
-        return PagoService.savePago(pago);
+    public Pago guardarPago(@RequestBody Pago pago){
+        return PagoService.save(pago);
     }
 
     @GetMapping("/{id}")
-    public Pago obtenerPagoPorId(@PathVariable int id) {
-        return PagoService.getPagoById(id);
+    public List<Pago> obtenerPagoPorId(@PathVariable int id) {
+        return PagoService.findByid(id);
     }
 
     @PostMapping("/pedido/{id}")
-    public Pago obtenerPagoPorIdPedido(@PathVariable int id) {
-        return PagoService.getPagoByIdPedido(id);
-    }
-
-    @PutMapping("/{id}")
-    public Envio actualizarPago(@PathVariable int id, @RequestBody Pago pago) {
-        pago.setId(id);
-        return PagoService.getPagoById(id);
+    public List<Pago> obtenerPagoPorIdPedido(@PathVariable int id) {
+        return PagoService.findByPagos(id);
     }
 
 }

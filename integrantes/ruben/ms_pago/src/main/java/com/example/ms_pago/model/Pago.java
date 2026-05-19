@@ -28,4 +28,3 @@ public class Pago {
     @Column(name = "id_pedido")
     private int id_pedido;
 }
-

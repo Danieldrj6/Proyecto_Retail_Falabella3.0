@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ventas.example.ms_ventas.model.VentasModelo;
-import com.ventas.example.ms_ventas.service.VentasService;
+import com.ventas.example.ms_ventas.service.ventasService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ventasController {
 
     @Autowired
-    private VentasService ventasService;
+    private ventasService ventasService;
 
     @GetMapping()
     public List<VentasModelo> findAll(){
