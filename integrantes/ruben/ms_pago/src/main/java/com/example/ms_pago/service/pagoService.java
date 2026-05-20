@@ -13,12 +13,8 @@ public class pagoService {
     @Autowired
     private pagoRepository repository;
 
-    public List<Pago> findByid(Integer id){
-        return repository.findbyId(null);
-    }
-
-    public List<Pago> findByPagos(Integer id){
-        return repository.findByIdpago(0);
+    public List<Pago> findByPagos(Integer idPedido) {
+    return repository.findByIdPedido(idPedido);
     }
 
     public List<Pago> findAll(){

@@ -36,12 +36,7 @@ public class pagoController {
         return PagoService.save(pago);
     }
 
-    @GetMapping("/{id}")
-    public List<Pago> obtenerPagoPorId(@PathVariable int id) {
-        return PagoService.findByid(id);
-    }
-
-    @PostMapping("/pedido/{id}")
+    @GetMapping("/pedido/{id}")
     public List<Pago> obtenerPagoPorIdPedido(@PathVariable int id) {
         return PagoService.findByPagos(id);
     }

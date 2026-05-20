@@ -26,5 +26,5 @@ public class Pago {
     private String tipoComprobante;
 
     @Column(name = "id_pedido")
-    private int id_pedido;
+    private int idPedido;
 }
