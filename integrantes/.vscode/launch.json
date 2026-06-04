@@ -1,0 +1,94 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MsPedidoApplication<ms-pedido>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_pedido.MsPedidoApplication",
+            "projectName": "ms-pedido",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsProductoApplication<ms-producto>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_producto.MsProductoApplication",
+            "projectName": "ms-producto",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsUsuarioApplication<ms-usuario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_usuario.MsUsuarioApplication",
+            "projectName": "ms-usuario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsCarrito20Application<ms_carrito20>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ms_carrito.example.ms_carrito20.MsCarrito20Application",
+            "projectName": "ms_carrito20",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsComprobanteApplication<ms_comprobante>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_comprobante.MsComprobanteApplication",
+            "projectName": "ms_comprobante",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsEnvioApplication<ms_envio>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_envio.MsEnvioApplication",
+            "projectName": "ms_envio",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsPagoApplication<ms_pago>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_pago.MsPagoApplication",
+            "projectName": "ms_pago",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsSoporteApplication<ms_soporte>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_soporte.MsSoporteApplication",
+            "projectName": "ms_soporte",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsStockApplication<ms_stock>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.ms_stock.MsStockApplication",
+            "projectName": "ms_stock",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
