@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import com.ms_carrito.example.ms_carrito20.model.Carrito;
+import com.ms_carrito.example.ms_carrito20.model.CarritoItems;
 import com.ms_carrito.example.ms_carrito20.repository.RepositoryCarrito;
 import com.ms_carrito.example.ms_carrito20.repository.RepositoryItemsCarrito;
 
@@ -30,7 +31,7 @@ public class DataLoader implements CommandLineRunner{
         Random random = new Random();
 
         // generar carrito
-        for (int i = 2; i < 10; i++){
+        for (int i = 0; i < 10; i++){
             Carrito carrito = new Carrito();
             carrito.setUserId(i + 1);
             carrito.setTotalPrecio(faker.number().numberBetween(5000, 500000));
@@ -39,6 +40,14 @@ public class DataLoader implements CommandLineRunner{
 
         List<Carrito> carritos = repositoryCarrito.findAll();
 
+        // Generar carrito items
+        for (int i = 0; i < 3; i++){
+            CarritoItems carritoItems = new CarritoItems();
+            carritoItems.setCarrito_id(carritos.get(i).getId());
+            carritoItems.setProducto_id(i+1);
+            carritoItems.setCantidad(faker.number().numberBetween(1, 10));
+            repositoryItemsCarrito.save(carritoItems);
+        }
 
     }
 
