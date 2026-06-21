@@ -2,5 +2,6 @@
     "java.compile.nullAnalysis.mode": "automatic",
     "java.project.sourcePaths": [
         "integrantes/daniel/ms_carrito/src/main/java"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

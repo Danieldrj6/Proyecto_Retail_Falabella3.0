@@ -9,11 +9,11 @@ import java.util.List;
 @Repository
 public interface VentasRepositorio extends JpaRepository<VentasModelo, Integer> {
 
-    List<VentasModelo> findByCarrito_id(Integer carrito_id);
+    List<VentasModelo> findByCarritoId(Integer carritoId);
 
-    List<VentasModelo> findByUser_id(Integer user_id);
+    List<VentasModelo> findByUserId(Integer userId);
 
-    List<VentasModelo> findByEs_factura(boolean es_factura);
+    List<VentasModelo> findByEsFactura(boolean esFactura);
 
     List<VentasModelo> findAll();
 

@@ -22,12 +22,12 @@ public class VentasModelo {
     private Integer id;
 
     @Column(name = "user_id", nullable = false)
-    private Integer user_id;
+    private Integer userId;
 
     @Column(name = "carrito_id", nullable = false)
-    private Integer carrito_id;
+    private Integer carritoId;
 
     @Column(name = "es_factura")
-    private boolean es_factura;
+    private boolean esFactura;
 
 }

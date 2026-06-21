@@ -22,16 +22,16 @@ public class ventasService {
     }
 
     public List<VentasModelo> findByIdCarrito(Integer id) {
-        return ventasRepositorio.findByCarrito_id(id);
+        return ventasRepositorio.findByCarritoId(id);
     }
 
     public List<VentasModelo> findByIdUsuario(Integer id) {
-        return ventasRepositorio.findByUser_id(id);
+        return ventasRepositorio.findByUserId(id);
     }
 
     public List<VentasModelo> esFacturaById(int id, boolean venta) {
         if (venta == true) {
-            return ventasRepositorio.findByEs_factura(venta);
+            return ventasRepositorio.findByEsFactura(venta);
         }
         return null;
     }
