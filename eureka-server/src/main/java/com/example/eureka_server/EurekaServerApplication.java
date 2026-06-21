@@ -1,4 +1,4 @@
-package com.example.ms_producto;
+package com.example.eureka_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer
 @SpringBootApplication
-public class MsProductoApplication {
+public class EurekaServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsProductoApplication.class, args);
+		SpringApplication.run(EurekaServerApplication.class, args);
 	}
 
 }
