@@ -12,27 +12,27 @@ public class envioService {
     @Autowired
     private envioRepository EnvioRepository;
 
-    public List<Envio> getEnvios(){
+    public List<Envio> getEnvios() {
         return EnvioRepository.obtenerEnvios();
     }
 
-    public Envio saveEnvio(Envio envio){
+    public Envio saveEnvio(Envio envio) {
         return EnvioRepository.guardar(envio);
     }
 
-    public Envio getEnvioId(int id){
+    public Envio getEnvioId(int id) {
         return EnvioRepository.buscarPorIdEnvio(id);
     }
 
-    public Envio getEnvioIdCompra(int id_compra){
+    public Envio getEnvioIdCompra(int id_compra) {
         return EnvioRepository.buscarPorIdCompra(id_compra);
     }
 
-    public Envio updateEnvio(Envio envio){
+    public Envio updateEnvio(Envio envio) {
         return EnvioRepository.actualizar(envio);
     }
 
-    public int totalEnvios(){
+    public int totalEnvios() {
         return EnvioRepository.totalEnvios();
     }
 
