@@ -1,0 +1,71 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: ms-usuario
+          uri: lb://ms-usuario
+          predicates:
+            - Path=/api/v1/usuarios/**
+
+        - id: ms-producto
+          uri: lb://ms-producto
+          predicates:
+            - Path=/api/v1/producto/**
+
+        - id: ms-pedido
+          uri: lb://ms-pedido
+          predicates:
+            - Path=/api/v1/pedidos/**
+
+        - id: ms_carrito20
+          uri: lb://ms_carrito20
+          predicates:
+            - Path=/api/v1/carrito/**
+
+        - id: ms_stock
+          uri: lb://ms_stock
+          predicates:
+            - Path=/api/v1/stock/**
+
+        - id: ms_soporte
+          uri: lb://ms_soporte
+          predicates:
+            - Path=/api/v1/soporte/**
+          filters:
+            - RewritePath=/api/v1/soporte/(?<segment>.*), /api/v1/comprobante/$\{segment}
+
+        - id: ms_pago
+          uri: lb://ms_pago
+          predicates:
+            - Path=/api/v1/pago/**
+
+        - id: ms_envio
+          uri: lb://ms_envio
+          predicates:
+            - Path=/api/v1/envio/**
+
+        - id: ms_comprobante
+          uri: lb://ms_comprobante
+          predicates:
+            - Path=/api/v1/comprobante/**
+
+        - id: ms_ventas
+          uri: lb://ms_ventas
+          predicates:
+            - Path=/api/v1/ventas/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
